@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>Pizza rendelés</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link text-white">Pizza rendelés</a></li>
+            <li class="nav-item"><a href="calc.html" class="nav-link">Online számológép</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h3 class="my-5">Pizza rendelés</h3>
+                <div class="jumbotron bg-warning">
+                    <form action="" id="myForm">
+                        <div class="form-group">
+                            <select name="" id="selTop" class="form-control sel-top">
+                                <option value="0" selected>Válassz feltétet!</option>
+                                <option value="1">sonka</option>
+                                <option value="2">sajt</option>
+                                <option value="3">gomba</option>
+                                <option value="4">kolbász</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <p><span id="priceErr" class="text-danger price-error"></span></p>
+                            <label for="priceInput">Ár</label>
+                            <input type="number" name="price-input" class="form-control" id="priceInput">
+                        </div>
+                        <div class="form-group">
+                            <p><span id="amountErr" class="text-danger amount-error"></span></p>
+                            <label for="amountInput">Mennyiség</label>
+                            <input type="number" name="amount-input" class="form-control" id="amountInput">
+                        </div>
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-info" onclick="calcTotal()">Megrendelés</button>
+                        <button type="button" class="btn btn-danger" onclick="formReset()">Törlés</button>
+                    </div>
+                    </form>
+                </div>
+                <p>Végösszeg: <span class="result">0</span> Ft</p>
+                <div class="table-container my-5">
+                    <h3>Megrendelés összesítése</h3>
+                    <table class="table table-bordered" id="priceTable">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Feltét</th>
+                                <th>Ár</th>
+                                <th>Mennyiség</th>
+                                <th>Végösszeg</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-top">nincs</td>
+                                <td class="td-price">0</td>
+                                <td class="td-amount">0</td>
+                                <td class="td-sum">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+</body>
+
+</html>
