@@ -1,2 +1,2 @@
 # jsproject-12a2
-Javascript gyakorlat 12a2-es csoport
+Javascript űrlapkezelés gyakorlat 12a csoport
